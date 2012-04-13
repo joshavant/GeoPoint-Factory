@@ -1,0 +1,1 @@
+require 'geopoint_factory'
