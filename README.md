@@ -13,12 +13,14 @@
 ```ruby
 require 'geopoint_factory'
 
-generator = GeoPointFactory::Generator.new("path/to/shapefile")
+generator = GeoPointFactory::Generator.new("path/to/shapefile") # omit file extension
 point_inside = generator.generate
 different_point_inside = generator.generate
 yet_another_point_inside = generator.generate
 generator.finalize
 ```
+
+* When done with a Generator instance, call #finalize.
 
 ## Discussion
 GeoPoint Factory was developed as a way to easily generate geographic coordinate data within a specific geographic area, while avoiding areas that may not be useful, such as in the ocean.
